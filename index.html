@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Rick and Morty Explorer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Rick and Morty Explorer</h1>
+        <p>Busca tus personajes favoritos</p>
+
+        <!-- Botón modo oscuro/claro -->
+        <button id="themeToggle" class="theme-toggle">
+            🌙 Cambiar tema
+        </button>
+    </header>
+
+    <main>
+        <section class="search-section">
+
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Buscar personaje..."
+            >
+
+            <!-- Filtro por estado -->
+            <select id="statusFilter">
+                <option value="">Todos</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+                <option value="unknown">Unknown</option>
+            </select>
+
+            <button id="searchButton">Buscar</button>
+        </section>
+
+        <p id="errorMessage" class="error-message"></p>
+
+        <section id="charactersContainer" class="characters-container"></section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <p><strong>Asignatura:</strong> Ingeniería Web</p>
+            </div>
+            <div class="footer-logo">
+                <!-- Espacio para logo -->
+                <img src="assets/logo.png" alt="Logo asignatura">
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

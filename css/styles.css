@@ -1,0 +1,163 @@
+/* ===== VARIABLES DE TEMA ===== */
+:root {
+    --bg-color: #1e1e2f;
+    --card-color: #2f2f46;
+    --text-color: #ffffff;
+    --accent-color: #00ffcc;
+}
+
+/* Tema claro */
+.light-mode {
+    --bg-color: #f4f4f4;
+    --card-color: #ffffff;
+    --text-color: #222222;
+    --accent-color: #0077ff;
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== GENERAL ===== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    transition: 0.3s ease;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header h1 {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+/* ===== BOTÓN TEMA ===== */
+.theme-toggle {
+    margin-top: 1rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* ===== BUSCADOR ===== */
+.search-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.search-section input,
+.search-section select {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.search-section button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* ===== CONTENEDOR ===== */
+.characters-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 2rem 2rem 2rem;
+}
+
+/* ===== TARJETA ===== */
+.card {
+    background-color: var(--card-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-body h3 {
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+/* ===== ERROR ===== */
+.error-message {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: red;
+    font-weight: bold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    .search-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--card-color);
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+    border-top: 2px solid var(--accent-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-text p {
+    font-size: 1rem;
+}
+
+.footer-logo img {
+    height: 50px;
+    object-fit: contain;
+}
+
+/* Responsive footer */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
