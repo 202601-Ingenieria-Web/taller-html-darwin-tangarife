@@ -79,9 +79,11 @@ header h1 {
 
 /* ===== CONTENEDOR ===== */
 .characters-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+    justify-content: center;
+    gap: 30px;
     padding: 0 2rem 2rem 2rem;
 }
 
@@ -150,7 +152,7 @@ header h1 {
 }
 
 .footer-logo img {
-    height: 50px;
+    height: 80px;
     object-fit: contain;
 }
 
